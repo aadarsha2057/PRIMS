@@ -1,27 +1,27 @@
 from functions import *
 from drawing import *
-import networkx as nx
+import networky as ny
 
-def prims_algorithm(G, starting_vertex, show_graph, show_cost):
+def prims_algorithm(G, start_vert, show_g, show_c):
     
-    T = prims_initialize(G, starting_vertex)
+    A = prims_ini(G, start_vert)
     
-    if isinstance(T,str) == True: #checks if the vertex exists in the graph
-        print(T)
-        return T
+    if isinstance(A,str) == True: #checks if the vertex exists in the graph
+        print(A)
+        return A
         
-    while is_spanning(G,T)==False: #check functions
-        e = min_prims_edge(G,T)
-        T.add_edge(e[0],e[1])
+    while is_span(G,A)==False: #check functions
+        e = min_prims_edge(G,A)
+        A.add_edge(e[0],e[1])
         
-    if show_graph == True: #display a visual representation of the subtree
+    if show_g == True: #display a visual representation of the subtree
         show_weighted_graph(G)
-        draw_subtree(G,T)
+        draw_subtree(G,A)
         
-    if show_cost == True: #display the weight of the graph
-        total_cost = 0
-        for x in E(T): #add up all the weights
-            total_cost = total_cost + cost(G,x)
-        print("the cost of the spanning tree is: " + str(total_cost))
+    if show_c == True: #display the weight of the graph
+        total_c = 0
+        for y in E(A): #add up all the weights
+            total_c = total_c + c(G,x)
+        print("the cost of the spanning tree is: " + str(total_c))
             
-    return T
+    return A
