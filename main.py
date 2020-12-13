@@ -3,7 +3,7 @@ from functions import *
 from drawing import *
 from algorithms import *
 
-graph_data = open('Graphs/graph4.txt','r') #to read in the graph you want to test graph1 - graph4
+graph_data = open('Graphs/graph4.txt','r') #to read in the graph you want to test graph01 - graph04
 
 G = ny.read_weighted_edgelist(graph_data, nodetype = int) #to create the initial graph 
 
