@@ -10,9 +10,9 @@ Aadarsha Dhungel
 
 Main directory - PRIMS
 *Files:*
-algorithms: main algorithm;
-drawing: functions with their plots;
-functions: functions;
-main: user input;
-test: test file;
+algorithms.py: main algorithm;
+plotting.py: functions with their plots;
+functions.py: functions;
+main.py: user input;
+test.py: test file;
 Graphs: contains test graphs.
