@@ -1,4 +1,4 @@
-import networkx as nx 
+import networky as ny 
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -9,7 +9,7 @@ def show_weighted_graph(G):
     nx.draw_networkx_edge_labels(G,pos,edge_labels = labels)
     plt.show()
     
-def draw_subtree(G,T):
+def draw_subtree(G,A):
     pos = nx.planar_layout(G)
     nx.draw_networkx(G,pos)
     labels = nx.labels = nx.get_edge_attributes(G,'weight')
